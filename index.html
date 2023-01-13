@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<style type="text/css">
+    #ui{
+        background-color: #333 ;
+        border-radius: 10px;
+        padding: 30px;
+        margin-top: 50px;
+    }
+    #ui label{
+        color: #fff;
+    }
+    #e{
+        align-items: center;
+    }
+
+    h2{
+        padding-left: 50px;
+    }
+    hr{
+        color: #fff;
+    }
+
+  
+
+</style>
+
+
+</head>
+
+<body>
+    
+ 
+<div class="container">
+
+    
+
+    <div class="row ">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div id="ui">
+                <h2>Registration Page</h2>
+                <form class="form-group">
+                    <label>Last Name :</label>
+                    <input type="text"  name="name" class="form-control" placeholder="Enter Your Name" id="name">
+
+
+
+                     <label>Last Name :</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter Your Email" id="email">
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label >Password :</label>
+                            <input type="Password" name="fname" class="form-control" placeholder="Enter Your Password" id="pass">
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label >Re-typePassword :</label>
+                            <input type="Password" name="lname" class="form-control" placeholder="Re-type again.." id="re-pass">
+
+                        </div>
+                    </div>
+                    <br>
+                    <select class="form-control">
+                        <option>Choose Gender..</option>
+                         <option>Male</option>
+                          <option>Female</option>
+                           <option>Others</option>
+                    </select>
+                    <br>
+                    <center>
+                    <input type="submint" onclick="result()" name="submint" value="submint" class="btn btn-primary btn-block btn-lg">
+                <br>
+                <hr>
+                    <input type="submint" onclick="resul()" name="submint" value="login" class="btn btn-primary btn-block btn-lg mt-2">
+                </center>
+   
+   
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    function result()
+    {
+        var username = document.getElementById("name").value
+        var useremail = document.getElementById("email").value
+        var userpass = document.getElementById("pass").value
+        var user_repass = document.getElementById("re-pass").value
+       
+
+       
+
+
+        if( user_repass == userpass)
+        {
+         
+
+            localStorage.setItem("Name",username)
+            localStorage.setItem("Email", useremail)
+            localStorage.setItem("Password", userpass)
+            document.getElementById("submit")
+            alert("Your Account Successfully Created!")
+            window.location.href="https://zain082.github.io/portfolio/"
+        }
+
+        else
+        {
+            
+
+
+            alert("Please Enter Correct re-password")
+        }
+
+       
+        
+
+    }
+
+    function resul()
+    {
+        window.location.href="login.html"
+    }
+
+
+</script>
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
