@@ -113,7 +113,7 @@
        
 
 
-        if( user_repass == userpass)
+          if( username == "" ||useremail =="" || userpass =="" )
         {
          
 
@@ -121,16 +121,27 @@
             localStorage.setItem("Email", useremail)
             localStorage.setItem("Password", userpass)
             document.getElementById("submit")
-            alert("Your Account Successfully Created!")
-            window.location.href="https://zain082.github.io/portfolio/"
+            alert("Please Fill All The Requirements")
+           
+        
+            
         }
+
 
         else
         {
             
 
 
-            alert("Please Enter Correct re-password")
+       
+
+            localStorage.setItem("Name",username)
+            localStorage.setItem("Email", useremail)
+            localStorage.setItem("Password", userpass)
+            window.location.href="https://zain082.github.io/portfolio1/"
+           alert("Your Account Succesfully Created!")
+    
+
         }
 
        
